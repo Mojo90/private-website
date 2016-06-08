@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: rgb(66, 69, 64);
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31, 31, 31);
+}
+h1, h2, h3 {
+    padding: 10px 0 25px 0;
+}
+p {
+    margin-bottom: 25px;
+    line-height: 22px;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 10px black;
+}
+.header {
+    position: relative;
+    height: 300px;
+}
+.header .image {
+    height: 300px;
+    width: 100%;
+    max-width: 800px;
+    background-image: url("../img/header.jpg");
+    background-position: top;
+}
+.header .title {
+    position: absolute;
+    bottom: 20px;
+    left: 320px;
+    font-size: 24pt;
+    color: white;
+    letter-spacing: 1.5px;
+}
+.header .title div {
+    font-size: 12pt;
+    color: white;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+}
+.welcome {
+    position: relative;
+    background-color: #FFFFFF;
+    padding-bottom: 30px;
+    box-shadow: 0 -3px 10px -2px black;
+}
+.welcome .image {
+    height: 150px;
+    width: 150px;
+    border-radius: 200px;
+    border: 6px solid white;
+    margin-top: -75px;
+    box-shadow: 0 -3px 10px black;
+    position: absolute;
+    background-image: url("../img/mo.jpg");
+}
+.welcome .content {
+    margin-left: 200px;
+    padding-top: 40px;
+}
+.section {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+.navigation {
+    float: left;
+    width: 150px;
+    margin-top: 125px;
+    border-left: 1px solid gray;
+    padding-left: 14px;
+}
+.navigation a {
+    text-decoration: none;
+}
+.navigation ul {
+    margin: -28px 0;
+}
+.navigation li {
+    color: rgb(98, 99, 101);
+    margin: 20px 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.navigation li:hover {
+    color: rgb(0, 0, 0);
+}
+.hobbies {
+    background-color: rgb(58, 62, 66);
+    box-shadow: 0 -3px 5px -2px rgb(58, 62, 66), 0 3px 5px -2px rgb(58, 62, 66);
+    z-index: 2;
+    color: white;
+    padding-top: 35px;
+    padding-bottom: 15px;
+}
+.hobbies h2, .hobbies p, .contact h2, .contact p, .contact i {
+    color: white;
+}
+.hobbies .list {
+    text-align: center;
+}
+.hobbies .list .item {
+    display: inline-block;
+    list-style: none;
+    padding: 20px;
+    width: 140px;
+    text-align: center;
+    vertical-align: top;
+}
+.hobbies img {
+    width: 100px;
+}
+.social {
+    background-color: white;
+    color: black;
+    padding-top: 35px;
+    padding-bottom: 15px;
+}
+.social a {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.social i {
+    color: #d80027;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.social i:hover {
+    color: black;
+}
+.social h3 {
+    text-align: center;
+    font-size: 24px;
+}
+.hobbies h2, .social h2, .contact h2 {
+    text-align: center;
+}
+.contact {
+    color: white;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    background: url("../img/contact.png") repeat #555;
+    box-shadow: inset 0 -50px 80px rgb(37, 47, 54), inset 0 10px 10px -2px rgb(37, 47, 54);
+}
+.contact a {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.contact a:hover {
+    color: #777;
+}
+#form {
+    text-align: center;
+}
+.contact input, .contact textarea {
+    background-color: transparent;
+    padding: 10px;
+    border-width: 0 0 2px 0;
+    background-color: transparent;
+    margin: 5px 0;
+    border-color: #777;
+    border-style: solid;
+    font-size: 12pt;
+    color: white;
+    width: 150px;
+}
+.contact textarea {
+    width: 310px;
+    height: 150px;
+}
+@media screen and (max-width: 750px) {
+    #navigation {
+        display: none;
+    }
+    .welcome .content {
+        margin-left: 0;
+        padding-top: 130px;
+    }
+}
+@media screen and (max-width: 600px) {
+
+    .header {
+        height: 250px;
+    }
+    .header .title {
+        width: 100%;
+        left: 0;
+        top: 50px;
+        text-align: center;
+    }
+    .welcome .image{
+      left: calc(50% - 81px);
+    }
+}
+
+@media screen and (max-width: 525px) {
+  .social i{
+    padding-top:10px;
+  }
+}
