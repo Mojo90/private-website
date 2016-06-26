@@ -128,10 +128,11 @@ p {
     padding-bottom: 15px;
 }
 .social a {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .social i {
+    padding-top: 20px;
     color: #d80027;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
