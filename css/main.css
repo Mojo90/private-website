@@ -184,6 +184,12 @@ p {
     width: 310px;
     height: 150px;
 }
+.contact input:focus, .contact textarea:focus{
+  border-width: 0 0 2px 0;
+  border-color: black;
+  border-style: solid;
+  outline: none;
+}
 @media screen and (max-width: 750px) {
     #navigation {
         display: none;
