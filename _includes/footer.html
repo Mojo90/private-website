@@ -98,7 +98,7 @@
         document.getElementById("send-message").innerHTML = '<i class="fa fa-spinner fa-spin fa-fw"></i>';
         $.ajax({
             type: "POST",
-            url: "sendmail.php", //process to mail
+            url: "{{ site.url }}sendmail.php", //process to mail
             data: $('#form').serialize(),
             success: function(msg) {
                 document.getElementById("contact-form-name").value = "";

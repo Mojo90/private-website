@@ -754,7 +754,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
         document.getElementById("send-message").innerHTML = '<i class="fa fa-spinner fa-spin fa-fw"></i>';
         $.ajax({
             type: "POST",
-            url: "sendmail.php", //process to mail
+            url: "https://moritzpfeiffer.xyz/sendmail.php", //process to mail
             data: $('#form').serialize(),
             success: function(msg) {
                 document.getElementById("contact-form-name").value = "";
