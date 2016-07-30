@@ -1,0 +1,115 @@
+<footer class="site-footer">
+
+  <div class="contact" id="contact">
+      <div class="section">
+          <h2>{{ site.t[page.lang].contact}}</h2>
+          <p style="text-align: center;">
+              <a href="mailto:hi@moritzpfeiffer.xyz" target="_blank">hi@moritzpfeiffer.xyz</a>
+          </p>
+          <form id="form">
+              <input type="text" id="contact-form-name" name="name" placeholder="{{ site.t[page.lang].name}}" />
+              <input type="text" id="contact-form-email" name="email" placeholder="{{ site.t[page.lang].email}}" />
+              <br />
+              <textarea id="contact-form-message" name="text" placeholder="{{ site.t[page.lang].message}}"></textarea>
+              <br />
+              <br />
+              <a href="#" id="send-message" onclick="checkForm();return false;" id="contact-form-submit">{{ site.t[page.lang].send}}</a>
+          </form>
+          <p style="text-align: center; border-top: 1px solid #444; padding-top: 50px; margin-top: 50px; color: #666;">&copy; Moritz Pfeiffer
+              <br /> Icons designed by <a href="http://www.freepik.com" target="_blank" style="color: #666;">Freepik</a></p>
+      </div>
+  </div>
+
+</footer>
+<!-- Latest compiled and minified JavaScript -->
+<script type="text/javascript">{% include js/jquery.js %}</script>
+<script type="text/javascript">{% include js/wow.js %}</script>
+<script type="text/javascript">
+    new WOW().init();
+    var smoothScroll = function(target, time) {
+        // time when scroll starts
+        var start = new Date().getTime(),
+
+            // set an interval to update scrollTop attribute every 25 ms
+            timer = setInterval(function() {
+
+                // calculate the step, i.e the degree of completion of the smooth scroll
+                var step = Math.min(1, (new Date().getTime() - start) / time);
+
+                // calculate the scroll distance and update the scrollTop
+                document.body['scrollTop'] = (step * target.offsetTop);
+
+                // end interval if the scroll is completed
+                if (step == 1) clearInterval(timer);
+            }, 25);
+    }
+
+    var checkForm = function() {
+        var name = document.getElementById("contact-form-name");
+        var email = document.getElementById("contact-form-email");
+        var text = document.getElementById("contact-form-message");
+        if (name && name.value.length == 0) {
+            name.style.borderColor = "red";
+            var l = 20;
+            for (var i = 0; i < 10; i++)
+                $("#contact-form-name").animate({
+                    'margin-left': "+=" + (l = -l) + 'px',
+                    'margin-right': "-=" + l + 'px'
+                }, 50);
+        } else if (email && !validateEmail(email.value)) {
+            name.style.borderWidth = "0 0 2px 0";
+            name.style.borderColor = "#777";
+            email.style.borderColor = "red";
+            var l = 20;
+            for (var i = 0; i < 10; i++)
+                $("#contact-form-email").animate({
+                    'margin-left': "+=" + (l = -l) + 'px',
+                    'margin-right': "-=" + l + 'px'
+                }, 50);
+        } else if (text && text.value.length == 0) {
+            name.style.borderWidth = "0 0 2px 0";
+            name.style.borderColor = "#777";
+            email.style.borderWidth = "0 0 2px 0";
+            email.style.borderColor = "#777";
+            text.style.borderColor = "red";
+            var l = 20;
+            for (var i = 0; i < 10; i++)
+                $("#contact-form-message").animate({
+                    'margin-left': "+=" + (l = -l) + 'px',
+                    'margin-right': "-=" + l + 'px'
+                }, 50);
+        } else {
+            name.style.borderWidth = "0 0 2px 0";
+            name.style.borderColor = "#777";
+            email.style.borderWidth = "0 0 2px 0";
+            email.style.borderColor = "#777";
+            text.style.borderWidth = "0 0 2px 0";
+            text.style.borderColor = "#777";
+            sendForm();
+        }
+    };
+
+    var validateEmail = function(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    };
+
+    var sendForm = function() {
+        document.getElementById("send-message").innerHTML = '<i class="fa fa-spinner fa-spin fa-fw"></i>';
+        $.ajax({
+            type: "POST",
+            url: "sendmail.php", //process to mail
+            data: $('#form').serialize(),
+            success: function(msg) {
+                document.getElementById("contact-form-name").value = "";
+                document.getElementById("contact-form-email").value = "";
+                document.getElementById("contact-form-message").value = "";
+                document.getElementById("send-message").innerHTML = "{{ site.t[page.lang].success }}";
+                //console.log("Message: " + msg);
+            },
+            error: function() {
+                document.getElementById("send-message").innerHTML = "{{ site.t[page.lang].error }}";
+            }
+        });
+    };
+</script>

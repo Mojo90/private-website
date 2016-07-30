@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Moritz Pfeiffer" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.t[page.lang].description }}" />
+  <meta name="keywords" content="Moritz, Pfeiffer, cycling, Fahrrad, bike, biking, startup" />
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta property="og:site_name" content="Moritz Pfeiffer" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Moritz Pfeiffer (Mo)" />
+  <meta property="og:description" content="{{ site.t[page.lang].description_long }}" />
+  <meta property="fb:profile_id" content="100000349228222" />
+  <meta property="og:image" content="{{ site.url }}img/mo_sharing.jpg" />
+  <meta property="og:url" content="{{ site.url }}" />
+  {% for page in pages %}
+    <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+  {% endfor %}
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "/img/favicon.ico" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/css/animate.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <script src="https://use.fontawesome.com/26a0972227.js"></script>
+</head>

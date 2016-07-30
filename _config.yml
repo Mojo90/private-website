@@ -1,0 +1,52 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: "Moritz Pfeiffer (Mo)"
+email: "hi@moritzpfeiffer.xyz"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://moritzpfeiffer.xyz/" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+#github_username:  jekyll
+
+# Build settings
+#markdown: kramdown
+#theme: minima
+t:
+  en:
+    home:
+      name: "EN"
+      url: "/"
+    description: "This is Moritz' website. He is from Stuttgart and he likes startups, cycling, fitness, travelling, reading and gadgets. Feel free to contact him!"
+    description_long: "This is Moritz' website. He is from Stuttgart and he likes startups, cycling, fitness, travelling, reading and gadgets. If you have questions, suggestions, criticism or just want to have a cup of coffee or a glass of wine with him please do not hesitate to contact him via hi@moritzpfeiffer.xyz!"
+    send: "Send"
+    message: "Message"
+    name: "Name"
+    email: "Email"
+    contact: "Contact"
+    success: "Successfully sent. We will be in touch as soon as possible!"
+    error: "An error occurred. Please try again!"
+  de:
+    home:
+      name: "DE"
+      url: "/startseite/"
+    description: "Das ist Moritz' Webseite. Er ist aus Stuttgart und er mag Startups, Rad fahren, Fitness, Reisen, Lesen und Gadgets. Kontaktiere ihn sehr gerne!"
+    description_long: "Das ist Moritz' Webseite. Er ist aus Stuttgart und er mag Startups, Rad fahren, Fitness, Reisen, Lesen und Gadgets. Falls du Fragen, Anregungen, Lob oder Kritik hast oder einfach eine Tasse Kaffee oder ein Glas Wein mit ihm trinken möchtest darfst du ihn sehr gerne über hi@moritzpfeiffer.xyz kontaktieren!"
+    send: "Senden"
+    message: "Nachricht"
+    name: "Name"
+    email: "E-Mail"
+    contact: "Kontakt"
+    success: "Erfolgreich versendet. Wir bleiben in Kontakt!"
+    error: "Es ist ein Fehler aufgetreten. Bitte versuche es noch einmal!"
