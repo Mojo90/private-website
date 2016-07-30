@@ -17,8 +17,9 @@
     <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
   {% endfor %}
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{ "/img/favicon.ico" | prepend: site.baseurl }}" />
-  <link rel="stylesheet" type="text/css" href="{{ "/css/animate.min.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}img/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}css/animate.min.css">
+  <link rel="stylesheet" href="{{ site.url }}css/main.css">
+  <noscript><div id="noscript"><p>{{ site.t[page.lang].noscript }}</p></div></noscript>
   <script src="https://use.fontawesome.com/26a0972227.js"></script>
 </head>

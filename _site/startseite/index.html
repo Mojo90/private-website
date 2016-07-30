@@ -18,21 +18,27 @@
   <meta property="og:url" content="https://moritzpfeiffer.xyz/" />
   
 
-  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="/css/animate.min.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://moritzpfeiffer.xyz/img/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="https://moritzpfeiffer.xyz/css/animate.min.css">
+  <link rel="stylesheet" href="https://moritzpfeiffer.xyz/css/main.css">
+  <noscript><div id="noscript"><p>Bitte aktiviere Javascript um diese Seite anzuschauen.</p></div></noscript>
   <script src="https://use.fontawesome.com/26a0972227.js"></script>
 </head>
 
 
 <body>
-    <!--<header class="site-header">
+    <div id="loadingScreen">
+        <div class="loader">
+        </div>
+    </div>
+    <div id="bodyScreen">
+        <!--<header class="site-header">
 </header>-->
 
 
-    <div class="page-content">
-        <div class="wrapper">
-                        <div class="header">
+        <div class="page-content">
+            <div class="wrapper">
+                            <div class="header">
             <div class="image"></div>
             <div class="lang">
               <a href="/">EN</a> | <a href="/startseite/">DE</a>
@@ -128,11 +134,11 @@
 </div>
 
 
+            </div>
         </div>
-    </div>
 
-    <div class="wrapper">
-      <footer class="site-footer">
+        <div class="wrapper">
+            <footer class="site-footer">
 
   <div class="contact" id="contact">
       <div class="section">
@@ -762,8 +768,16 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
             }
         });
     };
+
+    var initSite = function(){
+      $("#loadingScreen").fadeOut("fast");
+      $("#bodyScreen").fadeIn("fast");
+    };
+
+    initSite();
 </script>
 
+        </div>
     </div>
 </body>
 

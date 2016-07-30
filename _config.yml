@@ -37,6 +37,7 @@ t:
     contact: "Contact"
     success: "Successfully sent. We will be in touch as soon as possible!"
     error: "An error occurred. Please try again!"
+    noscript: "Please enable javascript to view this site."
   de:
     home:
       name: "DE"
@@ -50,3 +51,4 @@ t:
     contact: "Kontakt"
     success: "Erfolgreich versendet. Wir bleiben in Kontakt!"
     error: "Es ist ein Fehler aufgetreten. Bitte versuche es noch einmal!"
+    noscript: "Bitte aktiviere Javascript um diese Seite anzuschauen."
