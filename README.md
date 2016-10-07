@@ -9,6 +9,7 @@ by [Moritz Pfeiffer](http://moritzpfeiffer.xyz)
 ## 1. Description
 
 This is my personal website. You can do whatever you want, if you have feedback for me please tell me, I always have understanding ears 😊! You can also leave me a message if you use anything of this repo, I am very happy to hear from you.
+Proudly created with [Jekyll](https://jekyllrb.com).
 
 ## 2. License
 
