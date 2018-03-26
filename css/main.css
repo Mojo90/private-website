@@ -198,7 +198,8 @@ p {
     width: 100%;
     max-width: 800px;
     background-image: url("../img/header.jpg");
-    background-position: top;
+    background-position: center;
+	background-size: cover;
 }
 .header .lang {
     position: absolute;
